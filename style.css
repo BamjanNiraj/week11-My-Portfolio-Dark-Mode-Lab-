@@ -1,0 +1,49 @@
+/* --- Base Variables & Light Mode Defaults --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --btn-bg: #eeeeee;
+    --btn-text: #333333;
+}
+
+/* --- Dark Mode Overrides --- */
+/* When the body has the 'dark-mode' class, these colors apply */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --btn-bg: #444444;
+    --btn-text: #ffffff;
+}
+
+/* --- General Styles --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* This creates the smooth 'fade' effect when switching modes */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1px solid #888;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
